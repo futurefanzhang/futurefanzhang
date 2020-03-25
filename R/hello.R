@@ -58,7 +58,7 @@ GWAS=function(y,X,C){ #y represent phenotype, X represent genotype, C represent 
   G=X[,-1]
   ###remove PC that are in linear dependent to the covariates
   PCA=prcomp(G)
-  r<-cor(PCA$x,C)
+  r<-cor(PCA$x,C) #some data maybe not change to na?
   index1=r==1
   r[index1]=NA
   r_remain=na.omit(r) #I don't know how to remove rows with value of 1, so I change 1 to NA, than remove them.
@@ -122,6 +122,7 @@ y=cbind(myGD[,1],mySim$y)
 X=myGD
 myPC<-prcomp(myGD[,-1])
 myC<-myPC$x[,100:281] #set PC100 to PC220 as cofactor
+myC=cbind(myGD[,1],myC)
 myP<-GWAS(y=y,X=X,C=myC)
 plot(t(-log10(myP))~seq(1:m),col=color.vector[myGM[,2]])
 abline(v=mySim$QTN.position, lty = 2, lwd=2, col = "black")
