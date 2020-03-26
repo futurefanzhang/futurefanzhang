@@ -1,11 +1,12 @@
 Package: futurefanzhang
 Type: Package
-Title: What the Package Does (Title Case)
+Title: GWAS
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Fan Zhang
+Maintainer: The package maintainer <fan.zhang1@wsu.edu>
+Description: This is an easy package used for GWAS
+License: ZZlab
 Encoding: UTF-8
 LazyData: true
+
+

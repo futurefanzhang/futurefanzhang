@@ -1,6 +1,6 @@
-\name{hello}
-\alias{hello}
-\title{Hello, World!}
+\name{hello1}
+\alias{hello2}
+\title{Hello, World!3}
 \usage{
 hello()
 }
