@@ -27,7 +27,6 @@ AStest=function(y,X,C){ #y represent phenotype, X represent genotype, C represen
   } #end of looping for markers
   return(P)
 }
-myP<-AStest(y=myY,X=myGD,C=myC) #test
 
 #problem2
 GWAS=function(y,X,C){ #y represent phenotype, X represent genotype, C represent covariates.
@@ -36,7 +35,7 @@ GWAS=function(y,X,C){ #y represent phenotype, X represent genotype, C represent 
   G=X[,-1]
   ###remove PC that are in linear dependent to the covariates
   PCA=prcomp(G)
-  r<-cor(PCA$x,C) #calculate the relationship between PCs and covariates
+  r<-cor(PCA$x,C)
   index1=r==1
   r[index1]=NA
   r_remain=na.omit(r) #I don't know how to remove rows with value of 1, so I change 1 to NA, than remove them.
@@ -68,4 +67,3 @@ GWAS=function(y,X,C){ #y represent phenotype, X represent genotype, C represent 
   } #end of looping for markers
   return(P)
 }
-myGWAS<-GWAS(y=myY,X=myGD,C=myC) #test
