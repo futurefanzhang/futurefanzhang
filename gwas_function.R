@@ -27,7 +27,6 @@ AStest=function(y,X,C){ #y represent phenotype, X represent genotype, C represen
   } #end of looping for markers
   return(P)
 }
-myP<-AStest(y=myY,X=myGD,C=myC) #test
 
 #problem2
 GWAS=function(y,X,C){ #y represent phenotype, X represent genotype, C represent covariates.
@@ -68,4 +67,3 @@ GWAS=function(y,X,C){ #y represent phenotype, X represent genotype, C represent 
   } #end of looping for markers
   return(P)
 }
-myGWAS<-GWAS(y=myY,X=myGD,C=myC) #test
